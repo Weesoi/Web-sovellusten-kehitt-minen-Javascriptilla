@@ -7,6 +7,24 @@
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="css/styles.css" />
 </head>
+<script>
+	function changeHeading() {
+		document.title = "Uusi otsikko!"
+		let t = document.querySelectorAll('h2')[0]
+		t.innerHTML = "Muokattu otsikko!"
+	}
+	function secondButton() {
+		let t = document.querySelectorAll('h2')[1]
+		t.style.fontSize = "40px"
+		t.style.fontFamily = "Arial"
+		t.style.fontStyle = "Italic"
+		t.style.backgroundColor = "green"
+	}
+	function valitseAuto() {
+		let malli = document.querySelector('#mySelect').value
+		alert(malli)
+	}
+</script>
 
 <body>
 	<hr />
@@ -69,7 +87,7 @@
 		</li>
 	</ul>
 	<p>Valitse uusi auto listasta.</p>
-	<select name="mySelect" id="mySelect" onchange="">
+	<select name="mySelect" id="mySelect" onchange="valitseAuto()">
 		<option value="BMW">BMW</option>
 		<option value="Audi">Audi</option>
 		<option value="Mercedes">Mercedes</option>
