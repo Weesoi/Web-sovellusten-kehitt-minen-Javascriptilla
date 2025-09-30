@@ -5,7 +5,26 @@
 <head>
 	<title>Työpaja 4</title>
 	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/styles.css" />
 </head>
+<script>
+	function changeHeading() {
+		document.title = "Uusi otsikko!"
+		let t = document.querySelectorAll('h2')[0]
+		t.innerHTML = "Muokattu otsikko!"
+	}
+	function secondButton() {
+		let t = document.querySelectorAll('h2')[1]
+		t.style.fontSize = "40px"
+		t.style.fontFamily = "Arial"
+		t.style.fontStyle = "Italic"
+		t.style.backgroundColor = "green"
+	}
+	function valitseAuto() {
+		let malli = document.querySelector('#mySelect').value
+		alert(malli)
+	}
+</script>
 
 <body>
 	<hr />
@@ -16,35 +35,10 @@
 	</p>
 	<p>
 		<button onclick="changeHeading();">Painike 1</button>
-		<button onclick="secondButton">Painike 2</button>
+		<button onclick="secondButton()">Painike 2</button>
 		<button onclick="">Painike 3</button>
 	</p>
 
-
-<script>
-
-	function changeHeading () {
-	document.querySelector('h2').innerHTML="Jaahas jaahas :D"
-
-	};
-
-
-
-	function secondButton() {
-		const h2= document.querySelectorAll('h2')[1];
-
-		h2.style.color = "red";
-		h2.style.fontFamily = "Comic Sans MS";
-
-	}
-
-
-
-
-
-
-
-</script>
 	<ul>
 		<li>
 			Ensimmäisen painikkeen tulisi suorittaa JavaScript-funktio, joka löytää
@@ -60,13 +54,11 @@
 			Kolmas painike lisää korvaa allaolevan Lorem Ipsum-tekstikappaleen sisällön jollain itse valitsemallasi
 			tekstillä. Säilytä tekstin muotoilu.<br />
 			<br />
-			<em>
-				<strong id="lorem">&quot;Lorem ipsum</strong>
+			<strong id="lorem"><em>&quot;Lorem ipsum</em></strong><em>
 				dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum
 				sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed
 				sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae,
-				consectetuer et venenatis eget velit. &quot;<br><br>
-			</em>
+				consectetuer et venenatis eget velit. &quot;<br><br></em>
 		</li>
 		<li>
 			Bonus: Miten lisäisit tekstiä Lorem Ipsum-kappaleen perään ylikirjoittamatta olemassaolevaa tekstiä?
@@ -95,7 +87,7 @@
 		</li>
 	</ul>
 	<p>Valitse uusi auto listasta.</p>
-	<select name="mySelect" id="mySelect" onchange="">
+	<select name="mySelect" id="mySelect" onchange="valitseAuto()">
 		<option value="BMW">BMW</option>
 		<option value="Audi">Audi</option>
 		<option value="Mercedes">Mercedes</option>
