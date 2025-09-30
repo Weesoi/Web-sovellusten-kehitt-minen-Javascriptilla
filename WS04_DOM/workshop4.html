@@ -5,7 +5,6 @@
 <head>
 	<title>Työpaja 4</title>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
@@ -17,10 +16,35 @@
 	</p>
 	<p>
 		<button onclick="changeHeading();">Painike 1</button>
-		<button onclick="secondButton">Painike 2</button>
+		<button onclick="secondButton();">Painike 2</button>
 		<button onclick="">Painike 3</button>
 	</p>
 
+
+<script>
+
+	function changeHeading () {
+	document.querySelector('h2').innerHTML="Jaahas jaahas :D"
+
+	};
+
+
+
+	function secondButton() {
+		const h2= document.querySelectorAll('h2')[1];
+
+		h2.style.color = "red";
+		h2.style.fontFamily = "Comic Sans MS";
+
+	}
+
+
+
+
+
+
+
+</script>
 	<ul>
 		<li>
 			Ensimmäisen painikkeen tulisi suorittaa JavaScript-funktio, joka löytää
